@@ -129,6 +129,7 @@ cardiofuse-4/
 │   └── cardiofuse4_system.py
 ├── requirements.txt
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
@@ -139,3 +140,4 @@ If your Python script is currently in the repository root rather than `src/`, ei
 1. Lin, T., & Fan, M. (2024). “Cardiovascular Disease Risk Prediction Based on Deep Feature Extraction.” *2024 9th International Conference on Intelligent Informatics and Biomedical Sciences (ICIIBMS)*, pp. 210–214. IEEE.
 2. Long, Y. (2024). “Using the XGB-LCE Model for Cardiovascular Disease Prediction from Individual Pivotal Factors.” *2024 4th International Conference on Consumer Electronics and Computer Engineering (ICCECE)*, pp. 399–402. IEEE.
 3. Sadasivuni, S., Damodaran, V., Banerjee, I., & Sanyal, A. (2022). “Real-time prediction of cardiovascular diseases using reservoir-computing and fusion with electronic medical record.” *2022 IEEE 4th International Conference on Artificial Intelligence Circuits and Systems (AICAS)*, pp. 58–61. IEEE.
+
