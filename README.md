@@ -7,9 +7,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 CardioFuse-4 is a multi-modal late-fusion architecture for cardiovascular disease (CVD) prediction. It combines four specialist streams—lifestyle risk factors, clinical laboratory biomarkers, hospital electronic medical records (EMR), and wearable electrocardiogram (ECG) signals—into a unified prediction using a neural-network meta-classifier.
-
-> **Before publishing:** Replace the placeholder GitHub URL in the clone command and confirm that the listed script and dependencies match your repository. Add your research paper PDF to the `paper/` directory using the filename shown below, or update the link to match your actual filename.
-
 ---
 
 ## Contents
@@ -28,18 +25,16 @@ The research paper provides the detailed explanation of the CardioFuse-4 archite
 
 📄 **[Read the CardioFuse-4 Research Paper (PDF)](paper/CardioFuse-4_Research_Paper.pdf)**
 
-> If the paper has not been formally published or peer-reviewed, describe it as a research manuscript or preprint.
-
 ## Architecture
 
 CardioFuse-4 uses four modality-specific models. Their probability outputs are combined by a two-layer artificial neural network (ANN) meta-classifier with **7 hidden neurons**, which learns non-linear relationships between the specialist predictions.
 
 | Component | Input / modality | Method |
 |---|---|---|
-| **Stream 1 — Lifestyle** | Lifestyle pivotal factors | XGBoost feature screening (top 15 features), Local Cascade Ensemble (XGB-LCE), SMOTE rebalancing (2:3 ratio), and Negative Correlation Learning |
-| **Stream 2 — Clinical labs** | Laboratory biomarkers | Random Forest Gini screening (87 → 30 features), Pearson correlation, Framingham-scale filtering (30 → 26 features), and an improved 1D-CNN with Dynamic Self-Attention |
-| **Stream 3 — Hospital EMR** | Demographic variables and clinical notes | Four categorical demographic variables combined with TF-IDF-vectorized unstructured notes, classified using a maximum-margin Linear Support Vector Machine (SVM) |
-| **Stream 4 — Wearable ECG** | Continuous ECG; reported raw segment length: 6 seconds | In-sensor Reservoir-Computing Neural Network (RC-NN) with 40 reservoir neurons (`N = 40`, `Gᵢ = 0.7`, `G𝒇 = 0.1`) and a three-layer analog readout ANN |
+| **Stream 1 - Lifestyle** | Lifestyle pivotal factors | XGBoost feature screening (top 15 features), Local Cascade Ensemble (XGB-LCE), SMOTE rebalancing (2:3 ratio), and Negative Correlation Learning |
+| **Stream 2 - Clinical labs** | Laboratory biomarkers | Random Forest Gini screening (87 → 30 features), Pearson correlation, Framingham-scale filtering (30 → 26 features), and an improved 1D-CNN with Dynamic Self-Attention |
+| **Stream 3 - Hospital EMR** | Demographic variables and clinical notes | Four categorical demographic variables combined with TF-IDF-vectorized unstructured notes, classified using a maximum-margin Linear Support Vector Machine (SVM) |
+| **Stream 4 - Wearable ECG** | Continuous ECG; reported raw segment length: 6 seconds | In-sensor Reservoir-Computing Neural Network (RC-NN) with 40 reservoir neurons (`N = 40`, `Gᵢ = 0.7`, `G𝒇 = 0.1`) and a three-layer analog readout ANN |
 | **Meta-layer — Late fusion** | Four specialist probability scores | Two-layer ANN with 7 hidden neurons for non-linear fusion across modalities |
 
 ### Fusion flow
@@ -63,7 +58,7 @@ The following values are the benchmark results reported for the individual strea
 | Stream 4: In-Sensor RC-NN | Raw 6-second ECG signal | — | 0.930 | 92.00% |
 | **CardioFuse-4 (proposed fusion)** | **All four modalities** | **98.91%** | **0.994** | **98.75%** |
 
-`—` indicates that a value was not provided in the reported results.
+`-` indicates that a value was not provided in the reported results.
 
 ## Getting Started
 
