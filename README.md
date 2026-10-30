@@ -23,7 +23,7 @@ CardioFuse-4 is a multi-modal late-fusion architecture for cardiovascular diseas
 
 The research paper provides the detailed explanation of the CardioFuse-4 architecture, methodology, experimental setup, and reported results.
 
-📄 **[Read the CardioFuse-4 Research Paper (PDF)](paper/CardioFuse-4_Research_Paper.pdf)**
+📄 **[Read the CardioFuse-4 Research Paper (PDF)](paper/CardioFuse_research_paper.pdf)**
 
 ## Architecture
 
